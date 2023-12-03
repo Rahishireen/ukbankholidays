@@ -23,6 +23,6 @@ func InitLog() {
 			return "", fmt.Sprintf(" %s:%d", fileName, f.Line)
 		},
 	})
-	Logger.SetLevel(logrus.DebugLevel)
+	Logger.SetLevel(logrus.InfoLevel)
 	Logger.Debugf("Application logger initialized successfully.")
 }

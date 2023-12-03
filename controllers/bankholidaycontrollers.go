@@ -19,7 +19,7 @@ import (
 // If the request is successful, the function responds with a JSON representation of the fetched holidays
 // and a 200 OK status.
 func FetchHolidaysByYear(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-
+	utils.Logger.Infof("Received %s request for %s", r.Method, r.URL.Path)
 	utils.Logger.Debug("Handling request to fetch holidays by year.")
 
 	// Set the Content-Type header to indicate JSON response
@@ -48,6 +48,7 @@ func FetchHolidaysByYear(w http.ResponseWriter, r *http.Request, _ httprouter.Pa
 	// Respond with the fetched holidays
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(serviceResp)
+	utils.Logger.Infof("request has been processed successfully")
 }
 
 // FetchHolidaysOfEnglandWales handles HTTP requests to fetch holidays for England and Wales.
@@ -62,7 +63,7 @@ func FetchHolidaysByYear(w http.ResponseWriter, r *http.Request, _ httprouter.Pa
 // If the request is successful, the function responds with a JSON representation
 // of the fetched holidays and a 200 OK status.
 func FetchHolidaysOfEnglandWales(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-
+	utils.Logger.Infof("Received %s request for %s", r.Method, r.URL.Path)
 	utils.Logger.Debug("Handling request to fetch holidays for England and Wales.")
 
 	// Set the Content-Type header to indicate JSON response
@@ -78,6 +79,7 @@ func FetchHolidaysOfEnglandWales(w http.ResponseWriter, r *http.Request, _ httpr
 	// Respond with the fetched holidays
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(serviceResp)
+	utils.Logger.Infof("request has been processed successfully")
 }
 
 // FetchTitleDateOfHolidaysByYear handles HTTP requests to fetch holidays for a specific year
@@ -91,7 +93,7 @@ func FetchHolidaysOfEnglandWales(w http.ResponseWriter, r *http.Request, _ httpr
 // If the request is successful, the function responds with a JSON representation of the fetched holidays
 // and a 200 OK status.
 func FetchTitleDateOfHolidaysByYear(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-
+	utils.Logger.Infof("Received %s request for %s", r.Method, r.URL.Path)
 	utils.Logger.Debug("Handling request to fetch holidays with titles and dates by year.")
 
 	w.Header().Set("Content-Type", "application/json")
@@ -113,4 +115,5 @@ func FetchTitleDateOfHolidaysByYear(w http.ResponseWriter, r *http.Request, _ ht
 
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(serviceResp)
+	utils.Logger.Infof("request has been processed successfully")
 }
