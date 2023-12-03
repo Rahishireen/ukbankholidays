@@ -26,8 +26,8 @@ To run the application, you need the following
 
 - Go version 1.21.4
 - Below third party packages
-      -github.com/julienschmidt/httprouter v1.3.0
-      -github.com/sirupsen/logrus
+  - github.com/julienschmidt/httprouter v1.3.0
+  - github.com/sirupsen/logrus
 
   ## Getting Started
 
