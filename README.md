@@ -37,11 +37,24 @@ To run the application, you need the following
 
   ### Running the application
 
-  1. go build -o ukbankholidays
-  2. ./ukbankholidays
+  1. cd ukbankholidays
+  2. go build 
+  3. ukbankholidays.exe
+     
+  Note: Tested in windows machine
 
 ## Endpoints
 ![image](https://github.com/Rahishireen/ukbankholidays/assets/81709473/dd921985-84c2-4d34-94df-a3b38b469ac4)
+
+Note: 
+1. APIs can be triggered through postman(preferred) / web browser
+   eg:
+   
+   -http://localhost:8080/holidays-by-year?year=2023
+   
+   -http://localhost:8080/holidays-england-wales
+   
+   -http://localhost:8080/holidays-by-year-title-date?year=2023
 
 ## Testing
 go test ./...
