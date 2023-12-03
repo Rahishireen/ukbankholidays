@@ -48,7 +48,7 @@ go test ./...
 
 - Added unit test cases only for key parts of the application i.e controllers and services
 
-## logging 
+## Logging 
 - Incorporated the logrus third-party package in Go to enrich log entries with essential details such as timestamps
 - filenames, line numbers and log levels.
 - The default log level is set to "info".
@@ -66,5 +66,8 @@ Integrate a robust authentiaction mechanism to control access to the application
 
 ### 2. SSL Communication
 Implement SSL communication to ensure that the data transmitted between the client and server is encrypted 
+
+### 3. Handle Application Errors
+Implement logic to handle application errors, if any
 
   
